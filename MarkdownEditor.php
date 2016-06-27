@@ -1,9 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: r
- * Date: 27.06.16
- * Time: 6:23
+ * @package   yii2-markdown
+ * @author    Razzwan <razvanlomov@gmail.com>
+ * @version   1.0
  */
 
 namespace altiore\yii2\markdown;
@@ -13,6 +12,13 @@ use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\InputWidget;
 
+/**
+ * Markdown provides concrete implementation for A simple, beautiful, and embeddable JavaScript Markdown editor.
+ *  - Delightful editing for beginners and experts alike.
+ *  - Features built-in autosaving and spell checking. https://simplemde.com
+ * @author Razzwan <razvanlomov@gmail.com>
+ * @since  1.0
+ */
 class MarkdownEditor extends InputWidget
 {
     /**
@@ -32,6 +38,7 @@ class MarkdownEditor extends InputWidget
         $this->registerAssets();
         echo $this->renderInput();
     }
+
     /**
      * Register client assets
      */
@@ -42,6 +49,7 @@ class MarkdownEditor extends InputWidget
         $js = "var simplemde = new SimpleMDE({ {$this->prepareOptionsForSimpleMDE()} });";
         $view->registerJs($js, View::POS_END);
     }
+
     /**
      * Render the text area input
      */
@@ -54,8 +62,10 @@ class MarkdownEditor extends InputWidget
         }
         Html::addCssClass($this->previewOptions, 'hidden');
         $preview = Html::tag('div', '', $this->previewOptions);
+
         return $input . "\n" . $preview;
     }
+
     /**
      * Prepare options to widget
      * @return string
@@ -71,6 +81,7 @@ class MarkdownEditor extends InputWidget
                 $this->options[$key] = $key . ': "' . $value . '"';
             }
         }
+
         return implode(', ', $this->options);
     }
 }
