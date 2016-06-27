@@ -22,13 +22,6 @@ use yii\widgets\InputWidget;
 class MarkdownEditor extends InputWidget
 {
     /**
-     * @var array the HTML attributes for the preview
-     * container which will display the converted
-     * HTML text
-     */
-    public $previewOptions = [];
-
-    /**
      * Initialize the widget
      */
     public function init()
@@ -60,10 +53,8 @@ class MarkdownEditor extends InputWidget
         } else {
             $input = Html::textArea($this->name, $this->value, $this->options);
         }
-        Html::addCssClass($this->previewOptions, 'hidden');
-        $preview = Html::tag('div', '', $this->previewOptions);
 
-        return $input . "\n" . $preview;
+        return $input;
     }
 
     /**
