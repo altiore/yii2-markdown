@@ -11,7 +11,9 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "2.0.*",
+        "erusev/parsedown": "1.6.*",
+        "bower-asset/simplemde": "1.11.*"
     },
     "autoload": {
         "psr-4": {
