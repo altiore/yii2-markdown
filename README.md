@@ -27,6 +27,11 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
+1. Convert markdown to html:
 ```php
-<?= \altiore\yii2\markdown\Markdown::widget(); ?>
+<?= \altiore\yii2\markdown\Markdown::convert($markdownText); ?>
+```
+2. Editor markdown in yii2 form:
+```php
+<?= $form->field($model, 'text')->widget(\altiore\yii2\markdown\MarkdownEditor::class) ?>
 ```
