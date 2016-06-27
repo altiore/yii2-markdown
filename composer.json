@@ -1,0 +1,21 @@
+{
+    "name": "altiore/yii2-markdown",
+    "description": "Yii2 markdown parser and editor",
+    "type": "yii2-extension",
+    "keywords": ["yii2","markdown"," markdown parser"," markdown editor"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Razzwan",
+            "email": "razvanlomov@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "altiore\\yii2\\markdown\\": ""
+        }
+    }
+}
